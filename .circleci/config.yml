@@ -59,8 +59,5 @@ workflows:
   
   Who:
     jobs:      
-      - run:
-          name: Kek
-          command: |
-            whoami
+      - Mac-Test
 
