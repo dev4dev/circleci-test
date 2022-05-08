@@ -11,16 +11,19 @@ jobs:
           command: |
             echo 'Hello World!'
             echo 'This is the delivery pipeline'
+            pwd
   # fetching code from the repo
   Fetch-Code:
     docker:
       - image: cimg/base:2021.04
     steps:
+      - checkout
       - run:
           name: Getting the Code
           command: |
             ls -al
             echo '^^^Your repo files^^^'
+            pwd
   # running a node container
   Using-Node:
     docker:
