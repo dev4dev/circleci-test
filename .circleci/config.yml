@@ -7,7 +7,7 @@ commands:
       - run:
           name: "Remove everything"
           command: |
-            rm -rf ./* && rm -rf ./.*
+            ls -A1 | xargs rm -rf
 
 jobs:
   Get-Code:
