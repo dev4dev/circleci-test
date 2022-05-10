@@ -18,6 +18,7 @@ jobs:
       - run: env
       - run: whoami
       - run: uname -a
+      - run: xcversion installed
 
 workflows:
   Main:
