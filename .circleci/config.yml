@@ -15,7 +15,7 @@ jobs:
     resource_class: dev4dev/mac
     steps:
       - run: echo "Hi I'm on Runners!"
-      - run: xcversion installed
+      - run: env
 
 workflows:
   Main:
