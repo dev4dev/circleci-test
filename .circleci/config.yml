@@ -10,20 +10,14 @@ commands:
             ls -A1 | xargs rm -rf
 
 jobs:
-  Get-Code:
-    machine:
-      image: ubuntu-2004:current
-      docker_layer_caching: true
+  runner-test:
+    machine: true
+    resource_class: dev4dev/mac
     steps:
-      - checkout
-      - run: |
-          ls -ahl
-      - cleanup
-      - run: |
-          ls -ahl
-          echo "Done"
+      - run: echo "Hi I'm on Runners!"
+      - run: xcversion installed
 
 workflows:
-  GO:
+  Main:
     jobs:
-      - Get-Code
+      - runner-test
